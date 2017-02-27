@@ -1,21 +1,12 @@
 import {Component} from 'angular2/core';
-import {CoursesComponent} from './courses.component';
-import {AuthorsComponent} from './authors.component';
-import {FavoriteComponent} from './favorite.component';
-import {LikeComponent} from './like.component';
-import {VoteComponent} from './vote.component'
-import {TweetsComponent} from './tweets.component'
-import {AccordionComponent} from './accordion.component'
+import {ContactFormComponent} from './forms/contact-form.component'
 
 @Component({
     selector: 'my-app',
     template: `
-        <accordion></accordion>
+        <contact-form></contact-form>
     `,
-    directives: [AccordionComponent]
+    directives: [ContactFormComponent]
 })
 export class AppComponent {
-
-    
-    
  }
