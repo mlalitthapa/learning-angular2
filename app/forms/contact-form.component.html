@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" #f="ngForm" (submit)="onSubmit(f.form)">
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input 
@@ -7,11 +7,20 @@
             ngControl="firstName" 
             #firstName="ngForm"
             class="form-control"
-            required>
-        <div 
-            class="alert alert-danger" 
-            *ngIf="firstName.touched && !firstName.valid">
-            First name is required.
+            required
+            minlength="3">
+
+        <div *ngIf="firstName.touched && firstName.errors">
+            <div 
+                class="alert alert-danger" 
+                *ngIf="firstName.errors.required">
+                First name is required.
+            </div>
+            <div
+                class="alert alert-danger"
+                *ngIf="firstName.errors.minlength">
+                First name should be minimum {{ firstName.errors.minlength.requiredLength }} characters.
+            </div>
         </div>
     </div>
 
@@ -34,5 +43,5 @@
         </div>
     </div>
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>
 </form>
