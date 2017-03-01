@@ -8,6 +8,11 @@
             name="username"
             ngControl="username"
             #username="ngForm">
+
+        <div *ngIf="username.control.pending">
+            Checking availability...
+        </div>
+
         <div *ngIf="username.touched && username.errors">
             <div 
                 *ngIf="username.errors.required"
