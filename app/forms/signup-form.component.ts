@@ -19,7 +19,7 @@ export class SignupFormComponent{
             username: ['', Validators.compose([
                 Validators.required, 
                 UsernameValidator.noSpace
-            ])],
+            ]), UsernameValidator.unique],
             password: ['', Validators.required]
         })
     }

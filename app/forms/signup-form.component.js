@@ -30,7 +30,7 @@ System.register(['angular2/core', 'angular2/common', './usernameValidator'], fun
                         username: ['', common_1.Validators.compose([
                                 common_1.Validators.required,
                                 usernameValidator_1.UsernameValidator.noSpace
-                            ])],
+                            ]), usernameValidator_1.UsernameValidator.unique],
                         password: ['', common_1.Validators.required]
                     });
                 }

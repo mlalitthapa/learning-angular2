@@ -7,4 +7,15 @@ export class UsernameValidator{
 
         return null;
     }
+
+    static unique(control: Control){
+        return new Promise((resolve, reject) => {
+            setTimeout(function(){
+                if(control.value == 'lalit')
+                    resolve({ unique: true })
+                else
+                    resolve(null)
+            }, 1000)
+        })
+    }
 }
