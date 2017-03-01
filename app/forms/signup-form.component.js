@@ -22,10 +22,10 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
             }],
         execute: function() {
             SignupFormComponent = (function () {
-                function SignupFormComponent() {
-                    this.form = new common_1.ControlGroup({
-                        username: new common_1.Control('', common_1.Validators.required),
-                        password: new common_1.Control('', common_1.Validators.required)
+                function SignupFormComponent(fb) {
+                    this.form = fb.group({
+                        username: ['', common_1.Validators.required],
+                        password: ['', common_1.Validators.required]
                     });
                 }
                 SignupFormComponent.prototype.signup = function () {
@@ -36,7 +36,7 @@ System.register(['angular2/core', 'angular2/common'], function(exports_1, contex
                         selector: 'signup-form',
                         templateUrl: 'app/forms/signup-form.component.html'
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [common_1.FormBuilder])
                 ], SignupFormComponent);
                 return SignupFormComponent;
             }());
