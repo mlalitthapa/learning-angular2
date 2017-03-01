@@ -25,6 +25,11 @@ export class SignupFormComponent{
     }
 
     signup(){
+
+        this.form.find('username').setErrors({
+            invalidLogin: true
+        });
+
         console.log(this.form.value)
     }
 }

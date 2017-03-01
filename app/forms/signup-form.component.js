@@ -35,6 +35,9 @@ System.register(['angular2/core', 'angular2/common', './usernameValidator'], fun
                     });
                 }
                 SignupFormComponent.prototype.signup = function () {
+                    this.form.find('username').setErrors({
+                        invalidLogin: true
+                    });
                     console.log(this.form.value);
                 };
                 SignupFormComponent = __decorate([

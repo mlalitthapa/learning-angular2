@@ -29,6 +29,11 @@
                 class="alert alert-danger">
                 This username is already taken
             </div>
+            <div
+                *ngIf="username.errors.invalidLogin"
+                class="alert alert-danger">
+                Invalid username/password.
+            </div>
         </div>
     </div>
 
