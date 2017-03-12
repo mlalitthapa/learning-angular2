@@ -1,31 +1,19 @@
 import {Component} from 'angular2/core';
-import {PostService} from './http-requests/posts/post.service'
-import {HTTP_PROVIDERS} from 'angular2/http';
-import {OnInit} from 'angular2/core';
+import {GithubComponent} from './http-requests/githubapi/github.component'
 
 @Component({
     selector: 'my-app',
     template: `
-        <div *ngIf="isLoading">
-            <i class="fa fa-spinner fa-spin fa-3x"></i>
-        </div>
+        <github></github>
     `,
-    providers: [PostService, HTTP_PROVIDERS]
+    directives: [GithubComponent]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
     isLoading = true;
     
-    constructor(private _postService: PostService){
+    constructor(){
         
-    }
-
-    ngOnInit(){
-        this._postService.getPosts()
-            .subscribe(posts => {
-                this.isLoading = false;
-                console.log(posts);
-            });
     }
 
 }
