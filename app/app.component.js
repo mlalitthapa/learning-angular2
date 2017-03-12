@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './albums.component', './contact.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './album.component', './albums.component', './contact.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './albums.component', './co
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, albums_component_1, contact_component_1;
+    var core_1, router_1, album_component_1, albums_component_1, contact_component_1;
     var AppComponent;
     return {
         setters:[
@@ -17,6 +17,9 @@ System.register(['angular2/core', 'angular2/router', './albums.component', './co
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+            },
+            function (album_component_1_1) {
+                album_component_1 = album_component_1_1;
             },
             function (albums_component_1_1) {
                 albums_component_1 = albums_component_1_1;
@@ -31,6 +34,7 @@ System.register(['angular2/core', 'angular2/router', './albums.component', './co
                 AppComponent = __decorate([
                     router_1.RouteConfig([
                         { path: '/albums', name: 'Albums', component: albums_component_1.AlbumsComponent, useAsDefault: true },
+                        { path: 'albums/:id', name: 'Album', component: album_component_1.AlbumComponent },
                         { path: '/contact', name: 'Contact', component: contact_component_1.ContactComponent },
                         { path: '/*other', name: 'Other', redirectTo: ['Albums'] }
                     ]),
