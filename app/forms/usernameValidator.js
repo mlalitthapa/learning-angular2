@@ -1,6 +1,4 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register([], function(exports_1) {
     var UsernameValidator;
     return {
         setters:[],
@@ -24,7 +22,7 @@ System.register([], function(exports_1, context_1) {
                     });
                 };
                 return UsernameValidator;
-            }());
+            })();
             exports_1("UsernameValidator", UsernameValidator);
         }
     }
