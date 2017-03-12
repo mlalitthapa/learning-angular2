@@ -1,19 +1,8 @@
 import {Component} from 'angular2/core';
-import {GithubComponent} from './http-requests/githubapi/github.component'
 
 @Component({
     selector: 'my-app',
-    template: `
-        <github></github>
-    `,
-    directives: [GithubComponent]
+    templateUrl: '/app/app.component.html'
 })
 export class AppComponent {
-
-    isLoading = true;
-    
-    constructor(){
-        
-    }
-
 }
