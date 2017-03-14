@@ -43,7 +43,7 @@ System.register(['angular2/core', 'angular2/router', './home/home.component', '.
                     ]),
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <navbar></navbar>\n    ",
+                        template: "\n        <navbar></navbar>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n    ",
                         directives: [navbar_component_1.NavbarComponent, router_1.ROUTER_DIRECTIVES]
                     }), 
                     __metadata('design:paramtypes', [])

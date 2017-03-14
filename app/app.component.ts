@@ -16,6 +16,9 @@ import {UsersComponent} from './users/users.component'
     selector: 'my-app',
     template: `
         <navbar></navbar>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
     `,
     directives: [NavbarComponent, ROUTER_DIRECTIVES]
 })
