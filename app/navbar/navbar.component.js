@@ -1,4 +1,4 @@
-System.register(['angular2/core', './navbar/navbar.component'], function(exports_1) {
+System.register(['angular2/core'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,32 +8,28 @@ System.register(['angular2/core', './navbar/navbar.component'], function(exports
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, navbar_component_1;
-    var AppComponent;
+    var core_1;
+    var NavbarComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
-            },
-            function (navbar_component_1_1) {
-                navbar_component_1 = navbar_component_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            NavbarComponent = (function () {
+                function NavbarComponent() {
                 }
-                AppComponent = __decorate([
+                NavbarComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        template: "\n        <navbar></navbar>\n    ",
-                        directives: [navbar_component_1.NavbarComponent]
+                        selector: 'navbar',
+                        templateUrl: 'app/navbar/navbar.template.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], NavbarComponent);
+                return NavbarComponent;
             })();
-            exports_1("AppComponent", AppComponent);
+            exports_1("NavbarComponent", NavbarComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=navbar.component.js.map
