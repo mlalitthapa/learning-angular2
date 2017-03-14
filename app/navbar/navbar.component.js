@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1;
+    var core_1, router_1, router_2;
     var NavbarComponent;
     return {
         setters:[
@@ -17,10 +17,12 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1) {
             },
             function (router_1_1) {
                 router_1 = router_1_1;
+                router_2 = router_1_1;
             }],
         execute: function() {
             NavbarComponent = (function () {
-                function NavbarComponent() {
+                function NavbarComponent(router) {
+                    this.router = router;
                 }
                 NavbarComponent = __decorate([
                     core_1.Component({
@@ -28,7 +30,7 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1) {
                         templateUrl: 'app/navbar/navbar.template.html',
                         directives: [router_1.ROUTER_DIRECTIVES]
                     }), 
-                    __metadata('design:paramtypes', [])
+                    __metadata('design:paramtypes', [router_2.Router])
                 ], NavbarComponent);
                 return NavbarComponent;
             })();
